@@ -223,7 +223,7 @@ docker-compose up -d
 
 ### Configurando a conexão no pgAdmin
 
-1. Acesse o pgAdmin por um navegador e acesse http://localhost:8081. Use as credenciais que você definiu (admin@admin.com e admin) para fazer login.
+1. Acesse o pgAdmin por um navegador e acesse http://localhost:8081. Use as credenciais que definimos (admin@admin.com e admin) para fazer login.
 
 - Faça login com:
     - **Email**: admin@admin.com
@@ -240,7 +240,7 @@ docker-compose up -d
     - **Port**: 5432
     - **Maintenance database**: postgres
     - **Username**: postgres
-    - **Password**: a senha que foi definiida ao rodar o container do PostgreSQL, em nosso exemplo, *minha_senha*
+    - **Password**: a senha que foi definida ao rodar o container do PostgreSQL, em nosso exemplo, *minha_senha*
 
 ### Parando e Reiniciando os Containers
 
@@ -258,7 +258,7 @@ Reiniciar os containers parados:
 docker start meu-postgres pgadmin4
 ```
 
-Se estiver usando Docker Compose, você pode parar e reiniciar os containers usando:
+Se estiver usando Docker Compose, podemos parar e reiniciar os containers usando:
 
 ```sh
 docker-compose stop
