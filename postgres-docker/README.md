@@ -1,4 +1,4 @@
-# Tutorial: Configurando Ambiente PostgreSQL e pgAdmin com Docker
+# Tutorial: Configurando um Ambiente PostgreSQL e pgAdmin com Docker
 
 ## Introdução
 
@@ -240,7 +240,7 @@ docker-compose up -d
     - **Port**: 5432
     - **Maintenance database**: postgres
     - **Username**: postgres
-    - **Password**: a senha que você definiu ao rodar o container do PostgreSQL, em nosso exemplo, *minha_senha*
+    - **Password**: a senha que foi definiida ao rodar o container do PostgreSQL, em nosso exemplo, *minha_senha*
 
 ### Parando e Reiniciando os Containers
 
