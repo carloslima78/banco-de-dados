@@ -56,6 +56,13 @@ docker pull postgres
 docker run --name meu-postgres -e POSTGRES_PASSWORD=minha_senha -d -p 5432:5432 postgres
 ```
 
+Nesse comando:
+
+  - **--name** define o nome do container.
+  - **-e POSTGRES_PASSWORD** define a senha do usuário postgres.
+  - **-d** roda o container em modo "detached" (em segundo plano).
+  - **-p 5432:5432** mapeia a porta 5432 do container para a porta 5432 do host.
+
 ### Usando Docker Compose
 
 1. Crie um arquivo **docker-compose.yml** com o seguinte conteúdo:
@@ -174,6 +181,14 @@ Existem outras ferramentas equivalentes:
 docker run --name pgadmin4 -e PGADMIN_DEFAULT_EMAIL=admin@admin.com -e PGADMIN_DEFAULT_PASSWORD=admin -d -p 8081:80 dpage/pgadmin4
 ```
 
+Nesse comando:
+
+  - **--name** define o nome do container.
+  - **-p 8081:80** mapeia a porta 80 do container para a porta 8081 do host.
+  - **-e 'PGADMIN_DEFAULT_EMAIL=admin@admin.com'** define o email padrão para login.
+  - **-e 'PGADMIN_DEFAULT_PASSWORD=admin'** define a senha padrão para login.
+  - **-d** roda o container em modo "detached" (em segundo plano).
+
 ### Usando Docker Compose
 
 Adicione o serviço do pgAdmin ao arquivo **docker-compose**.yml:
@@ -208,17 +223,23 @@ docker-compose up -d
 
 ### Configurando a conexão no pgAdmin
 
-1. Acesse o pgAdmin em http://localhost:8081.
-2. Faça login com:
+1. Acesse o pgAdmin por um navegador e acesse http://localhost:8081. Use as credenciais que você definiu (admin@admin.com e admin) para fazer login.
+
+Faça login com:
     - **Email**: admin@admin.com
     - **Password**: admin
-3. Adicione o servidor PostgreSQL:
+3. Depois de fazer login no pgAdmin, adicione um servidor PostgreSQL:
+
+- Clique com o botão direito em "Servers" e selecione "Create" > "Server".
+- Na aba "General", dê um nome ao servidor.
+- Na aba "Connection", insira os detalhes de conexão do seu servidor PostgreSQL:
+
     - **Name**: PostgreSQL Docker
     - **Host name/address**: host.docker.internal (ou 172.17.0.1 no Linux)
     - **Port**: 5432
     - **Maintenance database**: postgres
     - **Username**: postgres
-    - **Password (Senha criada no lançamento do container)**: minha_senha
+    - **Password**: a senha que você definiu ao rodar o container do PostgreSQL, em nosso exemplo, *minha_senha*
 
 ### Parando e Reiniciando os Containers
 
