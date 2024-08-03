@@ -225,10 +225,11 @@ docker-compose up -d
 
 1. Acesse o pgAdmin por um navegador e acesse http://localhost:8081. Use as credenciais que você definiu (admin@admin.com e admin) para fazer login.
 
-Faça login com:
+- Faça login com:
     - **Email**: admin@admin.com
     - **Password**: admin
-3. Depois de fazer login no pgAdmin, adicione um servidor PostgreSQL:
+
+2. Depois de fazer login no pgAdmin, adicione um servidor PostgreSQL:
 
 - Clique com o botão direito em "Servers" e selecione "Create" > "Server".
 - Na aba "General", dê um nome ao servidor.
