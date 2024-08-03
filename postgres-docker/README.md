@@ -278,6 +278,12 @@ Para remover as imagens utilizadas:
 docker-compose down --rmi local
 ```
 
+**Alerta**: Caso a porta **8081** fique alocada informando que já está sendo utilizada após a paralização do container, use o comando abaixo:
+
+```sh
+kill -9 $(lsof -t -i:8080)
+```
+
 ## Conclusão
 
 Este breve tutorial cobre todos os passos necessários para configurar PostgreSQL e pgAdmin com Docker, realizar operações CRUD, parar e reiniciar containers, e limpar o ambiente.
