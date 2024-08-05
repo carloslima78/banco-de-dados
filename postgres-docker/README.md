@@ -229,6 +229,10 @@ docker-compose up -d
     - **Email**: admin@admin.com
     - **Password**: admin
 
+    <br>
+
+    ![imagem](../postgres-docker/images/login.png)
+
 2. Depois de fazer login no pgAdmin, adicione um servidor PostgreSQL:
 
 - Clique com o botão direito em "Servers" e selecione "Create" > "Server".
@@ -241,6 +245,10 @@ docker-compose up -d
     - **Maintenance database**: postgres
     - **Username**: postgres
     - **Password**: a senha que foi definida ao rodar o container do PostgreSQL, em nosso exemplo, *minha_senha*
+
+    <br>
+
+  ![imagem](../postgres-docker/images/connection.png)
 
 ### Parando e Reiniciando os Containers
 
