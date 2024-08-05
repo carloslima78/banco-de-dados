@@ -311,7 +311,7 @@ docker-compose down
 Para remover as imagens utilizadas:
 
 ```sh
-docker-compose down --rmi local
+docker-compose down --rmi all
 ```
 
 **Alerta**: Caso a porta **8081** utilizada pelo pgAdmin fique alocada informando que já está sendo utilizada após a paralização do container, use o comando abaixo para liberá-la:
