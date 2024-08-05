@@ -2,7 +2,13 @@
 
 ## Introdução
 
-Este guia descreve como configurar PostgreSQL e pgAdmin usando Docker. Vamos abordar desde a instalação do Docker, execução de containers usando linha de comando e Docker Compose, até operações CRUD e a remoção de containers e imagens.
+Este guia descreve como configurar o PostgreSQL e pgAdmin usando Docker. Vamos abordar desde a instalação do Docker, execução de containers usando linha de comando e Docker Compose, até operações CRUD e a remoção de containers e imagens.
+
+Configurar um ambiente de banco de dados pode ser uma tarefa demorada, especialmente quando se lida com várias ferramentas e dependências. A instalação manual do PostgreSQL e pgAdmin pode envolver diversos passos, configurações específicas e ajustes no sistema operacional. 
+
+Utilizar Docker para configurar essas ferramentas traz várias vantagens, como facilidade de instalação, portabilidade e isolamento do ambiente. 
+
+Com Docker, você pode rapidamente criar, gerenciar e destruir containers, facilitando a configuração e manutenção do seu ambiente de desenvolvimento.
 
 ## O que é PostgreSQL?
 
@@ -240,7 +246,7 @@ docker-compose up -d
 - Na aba "Connection", insira os detalhes de conexão do seu servidor PostgreSQL:
 
     - **Name**: PostgreSQL Docker
-    - **Host name/address**: host.docker.internal (ou 172.17.0.1 no Linux)
+    - **Host name/address**: 172.17.0.1 no Linux ou Windows
     - **Port**: 5432
     - **Maintenance database**: postgres
     - **Username**: postgres
