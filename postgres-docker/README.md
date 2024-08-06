@@ -1,4 +1,4 @@
-# Tutorial: Configurando um Ambiente PostgreSQL e pgAdmin com Docker
+# Tutorial: Configurando um Ambiente PostgreSQL com Docker
 
 ## Introdução
 
@@ -165,7 +165,7 @@ DELETE FROM fabricante WHERE id = 1;
 DELETE FROM produto WHERE id = 1;
 ```
 
-## Configurando pgAdmin
+## Configurando o pgAdmin
 
 ### O que é pgAdmin?
 
@@ -279,7 +279,7 @@ docker-compose stop
 docker-compose start
 ```
 
-### Removendo Containers e Imagens
+### Parando e Removendo Containers 
 
 Parar e remover os containers:
 
@@ -314,7 +314,7 @@ Para remover as imagens utilizadas:
 docker-compose down --rmi all
 ```
 
-**Alerta**: Caso a porta **8081** utilizada pelo pgAdmin fique alocada informando que já está sendo utilizada após a paralização do container, use o comando abaixo para liberá-la:
+**Dica**: Caso a porta **8081** utilizada pelo pgAdmin fique alocada informando que já está sendo utilizada após a paralisação do container, use o comando abaixo para liberá-la:
 
 ```sh
 kill -9 $(lsof -t -i:8081)
@@ -322,4 +322,4 @@ kill -9 $(lsof -t -i:8081)
 
 ## Conclusão
 
-Este breve tutorial cobre todos os passos necessários para configurar PostgreSQL e pgAdmin com Docker, realizar operações CRUD, parar e reiniciar containers, e limpar o ambiente.
+Este breve tutorial cobre todos os passos necessários para configurar um ambiente para execução do banco de dados PostgreSQL e a ferramenta administrativa pgAdmin com Docker, realizar operações CRUD, parar e reiniciar containers, e limpar o ambiente.
